@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@500;700&display=swap');
+/* vvvvvvvvvv APP SIZING & LAYOUT DESIGN vvvvvvvvvv */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  #root {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* vv removes scrollbar & still allows scrolling vv */
+/* fixes margin error to center title text */
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+/* ^^ removes scrollbar & still allows scrolling ^^ */
+  .App {
+    color: black;
+    background-color: #5EBEC4;
+    text-shadow: 0px 0px 0.5px black;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #333;
+    box-shadow: 0px 0px 15px gray;
+    -webkit-appearance: none;
+  }
+  
+  ul {
+    list-style-type: none;
+  }  
+  /* ^^^^^^^^^^ APP SIZING & LAYOUT DESIGN ^^^^^^^^^^ */
+  /* vvvvvvvvvv HOME PAGE vvvvvvvvvv */
+  .homePage {
+    min-width: 100vw
+  }
+
+  .about_titleContainer, .projects_titleArticle, .contact_titleArticle {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 100px 20px 20px 20px
+  }
+
+.contactSubtitle_container, .aboutSubtitle_container, .projectsSubtitle_container {
+  width: 325px;
+  text-align: center;
+  margin: auto;
+}
+
+.contactSubtitle_container, .aboutSubtitle_container, .aboutInfo_slideshow, .projectsSubtitle_container {
+ line-height: 1.6;
+}
+
+.heroSection, .aboutSection, .projectsSection, .contactSection {
+  border-bottom: 1px solid gray;
+}
+
+.scrollButton {
+   position: fixed; 
+   font-size: 3rem;
+   cursor: pointer;
+   color: #FF6864;
+   bottom: 20px;
+   right: 20px;
+   background-color: #5EBEC4;
+   border-radius: 50%;
+}
+.scrollButton:hover {
+  font-size: 5rem;
+}
+
+.footerSection {
+  padding-top: 50px;
+  background-color: #FDF5DF;
+}
+  /* ^^^^^^^^^^ HOME PAGE ^^^^^^^^^^ */
+  /* vvvvvvvvvv HERO SECTION vvvvvvvvvv */
+.introArticle, .footerArticle {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #FF6864
+}
+
+.introArticle span, .footerArticle span {
+  padding: 0px 10px
+}
+
+.heroArticle {
+  padding: 200px 0px
+}
+
+.heroContainer {
+    background-color: #FDF5DF;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 325px;
+    margin: auto;
+}
+.heroText {
+    display: flex;
+    flex-direction: column;
+}
+.hero_firstLine {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 84px;
+    background-color: #5EBEC4;
+    color: #FDF5DF;
+}
+
+.hero_secondLine {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #5EBEC4
+  }
+.hero_tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    background-color: #5EBEC4;
+  }
+.heroDeveloper {
+    color:#FF6864
+  }
+.heroWeb {
+    color: #FDF5DF;
+  }
+  /* ^^^^^^^^^^ HERO SECTION ^^^^^^^^^^ */
+  /* vvvvvvvvvv ABOUT SECTION vvvvvvvvvv */
+  /*min-height fixes what the image_slideshow absolute-positioning breaks*/
+  .aboutSection {
+    background-color: #FDF5DF;
+    color: #FF6864;
+  }
+  .about_infoArticle {
+    min-height: 300px;
+  }
+
+  .about_infoContainer {
+    padding-top: 100px;
+  }
+
+  .about_imageContainer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  /* ^^^^^^^^^^ ABOUT SECTION ^^^^^^^^^^ */
+  /* vvvvvvvvvv PROJECTS SECTION vvvvvvvvvv */
+  .projectsSection {
+    background-color: #FF6864;
+    color: #FDF5DF;
+    text-shadow: 0px 0px 2px black;
+  }
+.projects_slideshowArticle {
+  padding: 75px 0px 100px 0px
+}
+  /* ^^^^^^^^^^ PROJECTS SECTION ^^^^^^^^^^ */
+  /* vvvvvvvvvv CONTACT SECTION vvvvvvvvvv */
+  .contactSection {
+    background-color: #5EBEC4;
+    color: #FDF5DF;
+    text-shadow: 0px 0px 2px black;
+  }
+
+  .contactForm_container {
+    padding: 100px 0px;
+  }
+
+  .contactForm_container fieldset{
+      border: 3px solid #FF6864;
+      border-radius: 10px;
+      padding: 20px;
+      width: 325px;
+      margin: auto;
+  }
+
+  .contactForm_container form input, .contactForm_container form textarea {
+    width: 100%;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    font-family: inherit;
+    color: #FF6864;
+    background-color: #FDF5DF;
+  }
+  .contactForm_container ::placeholder {
+    color: #FF6864;
+  }
+  
+  input[type = text] {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+      height: 8rem;
+  }
+
+  .contactForm_container legend {
+      margin: auto;
+      font-size: 40px;
+  }
+  
+  .contactForm_container button {
+    border: 3px solid #FDF5DF;
+    border-radius: 10px;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    float: right;
+    padding: 3px 8px;
+    color: #FDF5DF
+  }
+  .contactForm_container button:hover {
+    border: 3px solid #FDF5DF;
+    background-color: #FF6864;
+    color: #FDF5DF
+  }
+
+  .contactIcons_area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 350px;
+    margin: auto;
+    padding-bottom: 100px;
+  }
+  .contactIcon {
+    border: 3px solid #FF6864;
+    color: #FDF5DF;
+    border-radius: 50%;
+    height: 75px;
+    width: auto;
+    padding: 5px
+  }
+  .contactIcon:hover {
+    border: 3px solid #FDF5DF;
+    color: #FF6864;
+  }
+
+  .contactIcons_area a:visited {
+    text-decoration: none;
+  }
+  /* ^^^^^^^^^^ CONTACT SECTION ^^^^^^^^^^ */
+  /* vvvvvvvvvv SLIDESHOWS vvvvvvvvvv */
+  .slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+  }
+  
+  .slide_active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.0);
+  }
+            /*********PROJECT*********/
+  .project_slideshow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    margin: auto;
+}
+  .project_slideshowImage {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #5EBEC4;
+  }
+  .project_rightArrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 8;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .project_leftArrow {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    z-index: 10;
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .project_leftArrow:hover, .project_rightArrow:hover {
+    color: #5EBEC4;
+    border: 3px solid #5EBEC4;
+    border-radius: 50%;
+    padding: 3px
+  }
+  .index_slideshow {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    opacity: .75;
+  }
+                 /*******IMAGES********/
+  .aboutImage_slideshowContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutImage_slideshowImage {
+    box-shadow: 5px 5px 10px #FF6864;
+    height: 325px;
+    border-radius: 10px;
+  }
+                /*******INFO********/
+  .about_infoArticle legend {
+    margin: auto;
+    font-size: 40px;
+  }
+  .aboutInfo_slideshowContainer {
+    margin: auto;
+    width: 325px;
+    text-align: center;
+  }
+  .info_slideshowTitle {
+    color: #5EBEC4
+  }
+
+  .aboutInfo_slideshowText fieldset {
+    height: 350px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    border: 3px solid #5EBEC4;
+    border-radius: 10px;
+  }
+
+  .aboutInfo_rightArrow, .aboutInfo_leftArrow {
+    font-size: 25px;
+    margin: 0px 10px;
+    cursor: pointer;
+  }
+  .aboutInfo_rightArrow:hover, .aboutInfo_leftArrow:hover {
+    border: 3px solid #FF6864;
+    border-radius: 50%;
+    padding: 3px;
+  }
+  .info_indexSlide {
+    position: absolute;
+    bottom: 5px;
+    right: 5px
+  }
+
+  /* ^^^^^^^^^^ SLIDESHOWS ^^^^^^^^^^ */
+@media all and (min-width: 600px) {
+  /*****titles*****/
+  .about_titleContainer, .projects_titleArticle, .contact_titleArticle {
+    font-size: 44px;
+    padding: 100px 50px 20px 50px
+  }
+  .contactSubtitle_container, .aboutSubtitle_container, .projectsSubtitle_container {
+    width: 375px;
+  }
+  /*****hero*****/
+  .heroContainer {
+    max-width: 400px;
+  }
+  .hero_firstLine {
+    font-size: 106px;
+}
+
+.hero_secondLine {
+    font-size: 64px;
+  }
+.hero_tagline {
+    font-size: 44px;
+  }
+  /*****PROJECTS*****/
+  .project_slideshow {
+    width: 475px;
+}
+  .project_slideshowImage {
+    height: 400px;
+  }
+}
+@media all and (min-width: 800px) {
+  .App {
+    font-size: 1.2rem;
+  }
+  .contactSubtitle_container, .aboutSubtitle_container, .projectsSubtitle_container {
+    width: 450px;
+  }
+    /*****hero*****/
+    .heroContainer {
+      max-width: 550px;
+    }
+    .hero_firstLine {
+      font-size: 144px;
+  }
+  
+  .hero_secondLine {
+      font-size: 88px;
+    }
+  .hero_tagline {
+      font-size: 60px;
+    }
+    /**********/
+
+    .aboutInfo_slideshowText fieldset {
+      height: 400px;
+      text-align: start;
+      display: flex;
+      align-items: center;
+      padding: 0px 15px;
+      font-size: 1.125rem;
+    }
+
+    .project_leftArrow, .project_rightArrow {
+      font-size: 2rem;
+    }
+    .project_slideshow {
+      width: 600px;
+  }
+    .project_slideshowImage {
+      height: 500px;
+    }
+  .about_infoArticle, .contactArticle {
+    display: flex;
+    align-items: center;
+  }
+
+  .about_infoContainer {
+    position: absolute;
+    right: 55%
+  }
+  .about_imageContainer {
+    position: absolute;
+    left:55%
+  }
+
+  .contactArticle {
+    justify-content: space-evenly;
+  }
+
+  .about_imageContainer {
+    padding-bottom: 0px;
+  }
+
+  .about_infoArticle {
+    min-height: 600px;
+    padding-bottom: 150px;
+  }
+  /*****CONTACT*****/
+  .contactForm_container fieldset{
+    width: 400px;
+}
+  .contactIcons_area {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 375px;
+    padding-bottom: 0px;
+    margin-top: 30px;
+  }
+  .contactIcon {
+    height: 90px;
+  }
+  .scrollButton {
+    bottom: 50px;
+    right: 50px
+ }
+}
+@media all and (min-width: 1200px) {
+  .about_titleContainer, .projects_titleArticle, .contact_titleArticle {
+    font-size: 50px;
+  }
+  .contactSubtitle_container, .aboutSubtitle_container, .projectsSubtitle_container {
+    width: 600px;
+  }
+    /*****hero*****/
+    .heroContainer {
+      max-width: 650px;
+    }
+    .hero_firstLine {
+      font-size: 170px;
+  }
+  
+  .hero_secondLine {
+      font-size: 104px;
+    }
+  .hero_tagline {
+      font-size: 72px;
+    }
+      /*****PROJECTS*****/
+  .project_slideshow {
+    width: 750px;
+}
+  .project_slideshowImage {
+    height: 600px;
+  }
+  .project_leftArrow, .project_rightArrow {
+    font-size: 2.5rem;
+  }
+  .projects_slideshowArticle {
+    padding: 100px 0px 100px 0px
+  }
+  /****/
+  .aboutInfo_slideshowContainer {
+    width: 400px;
+  }
+  .aboutInfo_slideshowText fieldset {
+    height: 400px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    font-size: 1.125rem;
+  }
+  .aboutImage_slideshowImage {
+    margin-top: 30px;
+    height: 375px;
+  }
+  .about_infoArticle {
+    min-height: 700px;
+    padding-bottom: 150px;
+  }
+  .contactForm_container fieldset{
+    width: 600px;
+}
+input[name="name"] {
+  margin-right: 10px;
+}
+textarea {
+  height: 12rem;
+}
+.contactIcons_area {
+  height: 600px;
+  margin-top: 30px;
+}
+.contactIcon {
+  height: 110px;
+}
+.nameAndEmail_box {
+  display: flex;
+}
+.about_infoContainer {
+  right: 60%
+}
+.about_imageContainer {
+  left:60%
+}
+.aboutInfo_rightArrow, .aboutInfo_leftArrow {
+  font-size: 40px;
+}
+.about_infoArticle legend {
+  font-size: 60px;
+}
+.contactForm_container legend {
+  font-size: 60px;
+}
+}
