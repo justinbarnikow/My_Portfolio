@@ -30,7 +30,7 @@ function Contact() {
                   <label htmlFor='subject'></label>
                   <input type='text' name='subject' id='subject' placeholder='Subject' />
                   <label htmlFor='message'></label>
-                  <textarea autoFocus="on" name='message' id='message' placeholder='Message'></textarea>
+                  <textarea name='message' id='message' placeholder='Message'></textarea>
                   <button type='submit'>Send</button>
                 </fieldset>
             </form>

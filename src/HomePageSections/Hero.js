@@ -4,11 +4,8 @@ function Hero() {
   return (
     <section className="heroSection">
       <article className='introArticle'>
-        <span className='justin_barnikow'>
-          Justin Barnikow
-        </span>
         <span className='professional_portfolio'>
-          Professional Portfolio
+          Portfolio by Justin Barnikow
         </span>
       </article>
         <article className="heroArticle">

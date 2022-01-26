@@ -7,7 +7,7 @@ function Projects() {
     <section className="projectsSection">
         <article className="projects_titleArticle">
           <span className="projects_title">
-            Some of Justins' Projects &#38; Work
+            Some of Justin's Projects &#38; Work
           </span>
         </article>
         <article className='projectsSubtitle_container'>

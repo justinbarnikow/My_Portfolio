@@ -89,25 +89,31 @@
    right: 20px;
    background-color: #5EBEC4;
    border-radius: 50%;
+   transition: font-size 1s;
 }
 .scrollButton:hover {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
-.footerSection {
-  padding-top: 50px;
-  background-color: #FDF5DF;
+img {
+  opacity: .8;
 }
+
+img:hover {
+  opacity: 1;
+  
+}
+
   /* ^^^^^^^^^^ HOME PAGE ^^^^^^^^^^ */
   /* vvvvvvvvvv HERO SECTION vvvvvvvvvv */
-.introArticle, .footerArticle {
+.introArticle {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   font-size: 12px;
-  color: #FF6864
+  color: #FDF5DF
 }
 
-.introArticle span, .footerArticle span {
+.introArticle span {
   padding: 0px 10px
 }
 
@@ -237,12 +243,14 @@
     font-size: 16px;
     float: right;
     padding: 3px 8px;
-    color: #FDF5DF
+    color: #FDF5DF;
+    transition: background-color .5s
   }
   .contactForm_container button:hover {
     border: 3px solid #FDF5DF;
     background-color: #FF6864;
-    color: #FDF5DF
+    color: #FDF5DF;
+    cursor:pointer
   }
 
   .contactIcons_area {
@@ -259,7 +267,8 @@
     border-radius: 50%;
     height: 75px;
     width: auto;
-    padding: 5px
+    padding: 5px;
+    transition: color 1s, border 1s;
   }
   .contactIcon:hover {
     border: 3px solid #FDF5DF;
@@ -293,7 +302,10 @@
   .project_slideshowImage {
     height: 300px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px #5EBEC4;
+    box-shadow: 0px 0px 10px #FDF5DF;
+  }
+  .project_slideshowImage:hover {
+    cursor: pointer;
   }
   .project_rightArrow {
     position: absolute;
@@ -303,8 +315,10 @@
     font-size: 1.5rem;
     cursor: pointer;
     user-select: none;
+    transition: color 1s, padding 1s;
   }
   .project_leftArrow {
+    transition: color 1s, padding 1s;
     position: absolute;
     top: 50%;
     left: 8px;
@@ -336,6 +350,9 @@
     height: 325px;
     border-radius: 10px;
   }
+  .aboutImage_slideshowImage:hover {
+    cursor: pointer;
+  }
                 /*******INFO********/
   .about_infoArticle legend {
     margin: auto;
@@ -351,7 +368,7 @@
   }
 
   .aboutInfo_slideshowText fieldset {
-    height: 350px;
+    height: 360px;
     text-align: start;
     display: flex;
     align-items: center;
@@ -362,13 +379,24 @@
 
   .aboutInfo_rightArrow, .aboutInfo_leftArrow {
     font-size: 25px;
-    margin: 0px 10px;
     cursor: pointer;
+    transition: color 1s, padding 1s;
+  }
+  .aboutInfo_leftArrow {
+    position: absolute;
+    top: 50%;
+    left:-8%
+  }
+  .aboutInfo_rightArrow {
+    position: absolute;
+    top: 50%;
+    right: -8%
   }
   .aboutInfo_rightArrow:hover, .aboutInfo_leftArrow:hover {
     border: 3px solid #FF6864;
     border-radius: 50%;
     padding: 3px;
+    color: #5EBEC4
   }
   .info_indexSlide {
     position: absolute;
@@ -475,6 +503,12 @@
     min-height: 600px;
     padding-bottom: 150px;
   }
+  .aboutInfo_leftArrow {
+    left:-10%
+  }
+  .aboutInfo_rightArrow {
+    right: -10%
+  }
   /*****CONTACT*****/
   .contactForm_container fieldset{
     width: 400px;
@@ -540,6 +574,12 @@
     align-items: center;
     padding: 0px 15px;
     font-size: 1.125rem;
+  }
+  .aboutInfo_leftArrow {
+    left:-15%
+  }
+  .aboutInfo_rightArrow {
+    right: -15%
   }
   .aboutImage_slideshowImage {
     margin-top: 30px;

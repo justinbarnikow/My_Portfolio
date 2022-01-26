@@ -23,17 +23,18 @@ const AboutInfoSlideshow = ({ infoSlides }) => {
   return (
       <section className="aboutInfo_slideshow">
             <div className='aboutInfo_slideshowContainer'>
+            
                 {AboutInfoSlideshowData.map((slide, index) => {
                     return (
                         <div className={index === current ? 'slide_active' : 'slide'} key={index}>
                             {index === current && (<form className='aboutInfo_slideshowText'>
                                 <fieldset>
                                 <legend>
-                                    <FaAngleDoubleLeft className='aboutInfo_leftArrow' onClick={prevSlide} />
                                     <span className="info_slideshowTitle">{slide.title}</span>
-                                    <FaAngleDoubleRight className='aboutInfo_rightArrow' onClick={nextSlide}/>
                                 </legend>
                                     {slide.info}
+                                    <FaAngleDoubleLeft className='aboutInfo_leftArrow' onClick={prevSlide} />
+            <FaAngleDoubleRight className='aboutInfo_rightArrow' onClick={nextSlide}/>
                                     <span className="info_indexSlide">{index + 1}/{infoSlides.length}</span>
                                 </fieldset>
                             </form>)}
