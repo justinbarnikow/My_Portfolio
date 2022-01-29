@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { ProjectSlideshowData } from './ProjectSlideshowData'
 import {FaAngleDoubleLeft, FaAngleDoubleRight} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const ProjectSlideshow = ({ slides }) => {
 
@@ -25,12 +26,14 @@ const ProjectSlideshow = ({ slides }) => {
                 <FaAngleDoubleRight className='project_rightArrow' onClick={nextSlide}/>
                 {ProjectSlideshowData.map((slide, index) => {
                     return (
-                        <div className={index === current ? 'slide_active' : 'slide'} key={index}>
-                            <span className='index_slideshow'>{index + 1}/{slides.length}</span>
-                            {index === current && (
-                                <img src={slide.image} alt='project' className='project_slideshowImage' />
-                            )}
-                        </div>
+                        <Link  to={`projects/${index + 1}`} key={index}>
+                            <div className={index === current ? 'slide_active' : 'slide'} key={index}>
+                                <span className='index_slideshow'>{index + 1}/{slides.length}</span>
+                                {index === current && (
+                                    <img src={slide.image} alt='project' className='project_slideshowImage' />
+                                )}
+                            </div>
+                        </Link>
                     )
                 })}
         </section>

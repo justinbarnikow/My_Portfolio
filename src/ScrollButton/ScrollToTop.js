@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaRegArrowAltCircleUp } from 'react-icons/fa';
 
 const ScrollToTop = () => {
@@ -20,6 +20,13 @@ const ScrollToTop = () => {
             behavior: 'smooth'
         })
     }
+
+    useEffect(() => {
+        toggleVisible();
+        return () => {
+          setVisible({}); // This worked for me
+        };
+    }, []);
 
     window.addEventListener('scroll', toggleVisible)
 

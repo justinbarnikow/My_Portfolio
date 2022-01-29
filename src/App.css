@@ -404,6 +404,69 @@ img:hover {
     right: 5px
   }
 
+  /************* PROJECT PAGE *************/
+  .projectPage {
+    height: 900px;
+    width: 100vw;
+    background-color: #FF6864;
+    color: #FDF5DF;
+    text-shadow: 0px 0px 2px black;
+  }
+  .projectPage_image {
+    margin: 10px 0px
+  }
+  .projectPage_image img {
+    height: 350px;
+    opacity: 1;
+    border-radius: 10px;
+    border: 2px solid #fdf5df;
+  }
+  .projectPage_image img:hover {
+    cursor: pointer;
+    opacity: .8;
+  }
+  .projectPage_title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+  }
+  .projectPage_titleText {
+    font-size: 48px;
+  }
+  .projectPage_infoArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .projectPage_form fieldset {
+    border: 3px solid #5EBEC4;
+    padding: 5px 15px;
+    width: 350px;
+    border-radius: 10px;
+  }
+  .projectPage_form legend {
+    margin: auto;
+    font-size: 24px;
+  }
+  .back_button {
+    background-color: inherit;
+    border: 3px solid #FDF5DF;
+    border-radius: 10px;
+    color: #FDF5DF;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    transition: color 1s, border 1s;
+  }
+  .back_button:hover {
+    border: 3px solid #5EBEC4;
+    color: #5EBEC4;
+    cursor: pointer;
+  }
+
   /* ^^^^^^^^^^ SLIDESHOWS ^^^^^^^^^^ */
 @media all and (min-width: 600px) {
   /*****titles*****/
@@ -528,6 +591,22 @@ img:hover {
     bottom: 50px;
     right: 50px
  }
+ .projectPage_titleText {
+  font-size: 72px;
+}
+.projectPage_title {
+  width: 600px;
+  margin: auto
+}
+.projectPage_image img {
+  height: 500px;
+}
+.projectPage_form fieldset {
+  width: 500px;
+}
+.projectPage {
+  height: 1000px;
+}
 }
 @media all and (min-width: 1200px) {
   .about_titleContainer, .projects_titleArticle, .contact_titleArticle {
@@ -622,5 +701,27 @@ textarea {
 }
 .contactForm_container legend {
   font-size: 60px;
+}
+
+.projectPage_titleText {
+  font-size: 96px;
+}
+.projectPage_title {
+  width: 650px;
+}
+.projectPage_infoArea {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+.projectPage_form fieldset {
+  border: 3px solid #5EBEC4;
+  padding: 30px 15px;
+  width: 400px;
+  border-radius: 10px;
+}
+.projectPage {
+  height: 900px;
 }
 }
