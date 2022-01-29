@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import HomePage from './HomePageSections/HomePage';
 import './App.css'
 import { ProjectSlideshowData } from './Slideshows/ProjectSlideshowData';
-import ProjectPage from './ProjectPage';
+import ProjectPage from './ProjectPages/ProjectPage';
 
 export default class App extends Component {
   render() {

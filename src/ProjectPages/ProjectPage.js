@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {FaAngleLeft} from 'react-icons/fa'
 
 function ProjectPage(props) {
     const title = props.project.title
@@ -30,7 +29,7 @@ function ProjectPage(props) {
             </article>
             <div className='projectPage_infoArea'>
                 <article className='projectPage_image'>
-                    <a href={link} target="_blank">
+                    <a href={link} target="_blank" rel='noreferrer'>
                         <img src={image} alt='project' className='projectPage_image' />
                     </a>
                 </article>
@@ -55,5 +54,7 @@ function ProjectPage(props) {
         </section>
     );
 }
+
+ProjectPage.defaultProps = { project: [] }
 
 export default ProjectPage;

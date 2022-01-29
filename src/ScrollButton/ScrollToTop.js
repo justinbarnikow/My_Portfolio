@@ -31,11 +31,11 @@ const ScrollToTop = () => {
     window.addEventListener('scroll', toggleVisible)
 
   return (
-    <button>
+    <div>
         <FaRegArrowAltCircleUp onClick={returnToTop} className='scrollButton' 
              style={{display: visible ? 'inline' : 'none'}}
         />
-    </button>
+    </div>
     );
 };
 
