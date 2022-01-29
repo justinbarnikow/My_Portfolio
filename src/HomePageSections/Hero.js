@@ -3,6 +3,11 @@ import React from 'react'
 function Hero() {
   return (
     <section className="heroSection">
+      <article className='background_text'>
+        <span className='background_justinBarnikow'>
+          JUSTIN
+        </span>
+      </article>
       <article className='introArticle'>
         <span className='professional_portfolio'>
           Portfolio by Justin Barnikow
