@@ -4,7 +4,7 @@ import { ProjectSlideshowData } from '../Slideshows/ProjectSlideshowData';
 
 function Projects() {
   return (
-    <section className="projectsSection">
+    <section className="projectsSection" id="projects_section">
         <article className="projects_titleArticle">
           <span className="projects_title">
             Some of Justin's Projects &#38; Work

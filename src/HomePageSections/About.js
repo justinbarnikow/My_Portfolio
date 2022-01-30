@@ -7,7 +7,7 @@ import AboutImageSlideshow from '../Slideshows/AboutImageSlideshow';
 
 function About() {
   return (
-      <section className="aboutSection">
+      <section className="aboutSection" id="about_section">
           <article className="about_titleArticle">
             <div className="about_titleContainer">
               <span className="aboutJustin">

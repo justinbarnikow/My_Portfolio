@@ -4,7 +4,7 @@ import { FaGit, FaInstagram, FaLinkedinIn, FaMailBulk } from 'react-icons/fa'
 
 function Contact() {
   return (
-    <section className="contactSection">
+    <section className="contactSection" id="contact_section">
         <article className="contact_titleArticle">
           <span className="contactTitle">
             How to Get in Contact

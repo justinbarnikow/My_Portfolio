@@ -1,12 +1,11 @@
 import React from 'react'
+import NavBar from './NavBar';
 
 function Hero() {
   return (
     <section className="heroSection">
-      <article className='introArticle'>
-        <span className='professional_portfolio'>
-          Portfolio by Justin Barnikow
-        </span>
+      <article className='navbar_area'>
+        <NavBar />
       </article>
         <article className="heroArticle">
           <div className="heroContainer">
