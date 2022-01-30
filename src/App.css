@@ -110,11 +110,19 @@ img:hover {
     justify-content: space-evenly;
     text-shadow: 0px 0px 2px black;
     font-size: 16px;
-    padding-top: 10px;
+    padding: 10px 0px;
   }
   .navbar a {
     color: #FDF5DF;
     text-decoration: none;
+    transition: color 1s;
+  }
+  .navbar a:hover {
+    color: #5EBEC4
+  }
+  .navbar_area {
+    background-color: #FF6864;
+    border-bottom: 3px solid #FDF5DF;
   }
 
 .heroArticle {
