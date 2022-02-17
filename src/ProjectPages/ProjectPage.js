@@ -8,6 +8,7 @@ function ProjectPage(props) {
     const second_info = props.project.second_info
     const image = props.project.image
     const link = props.project.link
+    const languages = props.project.languages
 
     const navigate = useNavigate()
 
@@ -51,6 +52,9 @@ function ProjectPage(props) {
                     </div>
                 </article>
             </div>
+            <article className='languages'>
+                    {languages}
+            </article>
         </section>
     );
 }

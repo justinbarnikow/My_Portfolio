@@ -17,6 +17,7 @@ export default class App extends Component {
           <Route path='/projects/2' element={<ProjectPage project={ProjectSlideshowData[1]} />} />
           <Route path='/projects/3' element={<ProjectPage project={ProjectSlideshowData[2]} />} />
           <Route path='/projects/4' element={<ProjectPage project={ProjectSlideshowData[3]} />} />
+          <Route path='/projects/5' element={<ProjectPage project={ProjectSlideshowData[4]} />} />
         </Routes>
       </div>
       );

@@ -475,6 +475,12 @@ img:hover {
     cursor: pointer;
   }
 
+  .languages {
+    margin: 20px 0px; 
+    display: flex;
+    justify-content: center;
+  }
+
   /* ^^^^^^^^^^ SLIDESHOWS ^^^^^^^^^^ */
 @media all and (min-width: 600px) {
   .quick_menu {
@@ -616,7 +622,7 @@ img:hover {
   width: 500px;
 }
 .projectPage {
-  height: 1000px;
+  height: 1100px;
 }
 
 }
