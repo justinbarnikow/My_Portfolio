@@ -1,6 +1,15 @@
 
 export const ProjectSlideshowData = [
     {
+        title: 'TravelPod 2.0',
+        subtitle: 'TravelPod is a React app that finds you the perfect-length podcast for the duration of your driving trip.',
+        image: require('../Images/TravelPod2.PNG'),
+        first_info: 'To use TravelPod, fill in the starting and ending destinations address, as well as a keyboard or phrase for the podcast. The podcasts displayed will all be of a similar length to the travel time between destinations (ie 90 minute travel time, 85-95 minute podcasts).',
+        second_info: 'TravelPod utilizes three separate APIs to function properly. It uses Mapbox Geocoding to convert the addresses to GPS coordinates, Bing Distance Matrix to calculate the travel time, and Listennotes to display the podcasts that are within the given duration.',
+        link: "https://travelpod.vercel.app/",
+        languages: 'Languages: HTML, CSS, JavaScript & jQuery'
+    },
+    {
         title: 'Recipod', 
         subtitle: 'Recipod is a React app that finds you the perfect-length podcast for the recipe of your choice.',
         image: require('../Images/recipod.png'),
@@ -24,17 +33,8 @@ export const ProjectSlideshowData = [
         image: require('../Images/noted.png'),
         first_info: 'Noted allows you to have as many lists and cards as you’d like. You can create and delete them at your will, double-click to change their titles and content, and prioritize them by highlighting the ‘star’ and ‘watch’ icons. ',
         second_info: 'Noted does not use any APIs, but does store data in state and makes use of ‘useState’ quite a bit to display and hide certain sections on the app.',
-        link: 'https://noted-gules.vercel.app/',
+        link: 'https://noted-jb.vercel.app/',
         languages: 'Languages: HTML, CSS & JavaScript'
-    },
-    {
-        title: 'TravelPod',
-        subtitle: 'TravelPod is a React app that finds you the perfect-length podcast for the duration of your driving trip.',
-        image: require('../Images/travel_pod.png'),
-        first_info: 'To use TravelPod, fill in the starting and ending destinations address, as well as a keyboard or phrase for the podcast. The podcasts displayed will all be of a similar length to the travel time between destinations (ie 90 minute travel time, 85-95 minute podcasts).',
-        second_info: 'TravelPod utilizes three separate APIs to function properly. It uses Mapbox Geocoding to convert the addresses to GPS coordinates, Bing Distance Matrix to calculate the travel time, and Listennotes to display the podcasts that are within the given duration.',
-        link: "https://justinbarnikow.github.io/travelpod/",
-        languages: 'Languages: HTML, CSS, JavaScript & jQuery'
     },
     {
         title: 'Pac-Man',
@@ -44,5 +44,14 @@ export const ProjectSlideshowData = [
         second_info: 'This app uses jQuery to create many of its functions and effects. All of the HTML is in one single file, as well as all of the JavaScript. This was the first project I ever made during my boot camp.',
         link: "https://justinbarnikow.github.io/pacman/",
         languages: 'Languages: HTML, CSS & JavaScript'
+    },
+    {
+        title: 'TravelPod 1.0',
+        subtitle: 'TravelPod is an app that finds you the perfect-length podcast for the duration of your driving trip.',
+        image: require('../Images/travel_pod.png'),
+        first_info: 'To use TravelPod, fill in the starting and ending destinations address, as well as a keyboard or phrase for the podcast. The podcasts displayed will all be of a similar length to the travel time between destinations (ie 90 minute travel time, 85-95 minute podcasts).',
+        second_info: 'TravelPod utilizes three separate APIs to function properly. It uses Mapbox Geocoding to convert the addresses to GPS coordinates, Bing Distance Matrix to calculate the travel time, and Listennotes to display the podcasts that are within the given duration.',
+        link: "https://justinbarnikow.github.io/travelpod/",
+        languages: 'Languages: HTML, CSS, JavaScript & jQuery'
     }
 ]
